@@ -1,0 +1,44 @@
+---
+title: "Planning days for the SRC"
+author: "Anthony Davidson"
+date: "02/07/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+## load libraries
+library(ggplot2)
+library(shiny)
+library(colourpicker)
+library(readxl)
+library(dplyr)
+library(readr)
+#library(extrafont)
+#loadfonts()
+```
+
+# Overview
+
+This is a short demo site to help with planning for the SRC for semester 2 2020.
+
+```{r}
+#import base dataset
+## THis is a csv file of key start and finish dates. 
+## This can then be intergrated with the calender app.
+#june2020
+
+datactions <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 2)
+
+datadets <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 3)
+
+datCSV1 <- read_csv("./data/Sem-two-planning.csv")
+datCSV1
+
+str(datactions)
+str(datadets)
+
+
+```
+
