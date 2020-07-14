@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Extra projects | My calender management</title>
+  <meta name="description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Extra projects | My calender management" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://seankross.com/bookdown-start/" />
+  
+  <meta property="og:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="github-repo" content="seankross/bookdown-start" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Extra projects | My calender management" />
+  
+  <meta name="twitter:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  
+
+<meta name="author" content="Anthony Davidson" />
+
+
+<meta name="date" content="2020-07-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="methods.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.14/datatables.js"></script>
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Bookdown Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#data-setup"><i class="fa fa-check"></i><b>1.1</b> Data setup</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#visualisation"><i class="fa fa-check"></i><b>1.2</b> Visualisation</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#feedback-loop"><i class="fa fa-check"></i><b>1.3</b> Feedback loop</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a><ul>
+<li class="chapter" data-level="2.0.1" data-path="methods.html"><a href="methods.html#datainformation"><i class="fa fa-check"></i><b>2.0.1</b> Data/information</a></li>
+<li class="chapter" data-level="2.0.2" data-path="methods.html"><a href="methods.html#baseline-dataset"><i class="fa fa-check"></i><b>2.0.2</b> Baseline dataset</a></li>
+<li class="chapter" data-level="2.0.3" data-path="methods.html"><a href="methods.html#summarised-actions"><i class="fa fa-check"></i><b>2.0.3</b> Summarised actions</a></li>
+<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#timeline"><i class="fa fa-check"></i><b>2.1</b> Timeline</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="methods.html"><a href="methods.html#overall-timeline"><i class="fa fa-check"></i><b>2.1.1</b> Overall timeline</a></li>
+<li class="chapter" data-level="2.1.2" data-path="methods.html"><a href="methods.html#figures"><i class="fa fa-check"></i><b>2.1.2</b> Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#individual-projects"><i class="fa fa-check"></i><b>2.2</b> Individual projects</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="methods.html"><a href="methods.html#phd"><i class="fa fa-check"></i><b>2.2.1</b> PhD</a></li>
+<li class="chapter" data-level="2.2.2" data-path="methods.html"><a href="methods.html#previous-achievements-and-tasks"><i class="fa fa-check"></i><b>2.2.2</b> Previous achievements and tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#council-tasks"><i class="fa fa-check"></i><b>2.3</b> Council tasks</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="methods.html"><a href="methods.html#uc-council"><i class="fa fa-check"></i><b>2.3.1</b> UC-Council</a></li>
+<li class="chapter" data-level="2.3.2" data-path="methods.html"><a href="methods.html#uc-src"><i class="fa fa-check"></i><b>2.3.2</b> UC-SRC</a></li>
+<li class="chapter" data-level="2.3.3" data-path="methods.html"><a href="methods.html#supporting-reproducibility-at-uc"><i class="fa fa-check"></i><b>2.3.3</b> Supporting Reproducibility at UC</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="methods.html"><a href="methods.html#uc-invertebrates"><i class="fa fa-check"></i><b>2.4</b> UC-Invertebrates</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="extra-projects.html"><a href="extra-projects.html"><i class="fa fa-check"></i><b>3</b> Extra projects</a><ul>
+<li class="chapter" data-level="3.1" data-path="extra-projects.html"><a href="extra-projects.html#courses"><i class="fa fa-check"></i><b>3.1</b> Courses</a></li>
+<li class="chapter" data-level="3.2" data-path="extra-projects.html"><a href="extra-projects.html#seminars"><i class="fa fa-check"></i><b>3.2</b> Seminars</a></li>
+<li class="chapter" data-level="3.3" data-path="extra-projects.html"><a href="extra-projects.html#teaching"><i class="fa fa-check"></i><b>3.3</b> Teaching</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="extra-projects.html"><a href="extra-projects.html#anu-climate-change"><i class="fa fa-check"></i><b>3.3.1</b> ANU: Climate Change</a></li>
+<li class="chapter" data-level="3.3.2" data-path="extra-projects.html"><a href="extra-projects.html#anu-masters-projects"><i class="fa fa-check"></i><b>3.3.2</b> ANU: Masters Projects</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="extra-projects.html"><a href="extra-projects.html#community-projects"><i class="fa fa-check"></i><b>3.4</b> Community projects</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My calender management</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="extra-projects" class="section level1 tabset">
+<h1><span class="header-section-number">Chapter 3</span> Extra projects</h1>
+<p>During Covid19 I have undertaken other additional learning and development tasks to keep me informed for my positions on Council and for my PhD work.</p>
+<div id="courses" class="section level2">
+<h2><span class="header-section-number">3.1</span> Courses</h2>
+<table style="width:100%;">
+<colgroup>
+<col width="57%" />
+<col width="15%" />
+<col width="9%" />
+<col width="3%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Course Name</th>
+<th>Enrolment Date</th>
+<th>Paid</th>
+<th>Y/N</th>
+<th>Grade Achieved</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Using clinical health data for better healthcare</td>
+<td>2019-07-01</td>
+<td>N</td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>A Life of Happiness and Fulfillment</td>
+<td>2020-04-04</td>
+<td>N</td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Science Matters: Let’s Talk About COVID-19</td>
+<td>2020-04-03</td>
+<td>N</td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Reproducible Research</td>
+<td>2020-04-21</td>
+<td>N</td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Understanding Clinical Research: Behind the Statistics</td>
+<td>2020-04-04</td>
+<td>N</td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>The Science of Well-Being</td>
+<td>2020-04-21</td>
+<td>N</td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Learning How to Learn: Powerful mental tools to help you master tough subjects</td>
+<td>2020-04-04</td>
+<td>N</td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Mindshift: Break Through Obstacles to Learning and Discover Your</td>
+<td>Hidden Potential</td>
+<td>2020-04-04</td>
+<td>N</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td>Mountains 101</td>
+<td>2020-04-04</td>
+<td>N</td>
+<td>0.00</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Machine Learning</td>
+<td>2020-04-04</td>
+<td>N</td>
+<td>0.00</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="seminars" class="section level2">
+<h2><span class="header-section-number">3.2</span> Seminars</h2>
+</div>
+<div id="teaching" class="section level2">
+<h2><span class="header-section-number">3.3</span> Teaching</h2>
+<div id="anu-climate-change" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> ANU: Climate Change</h3>
+</div>
+<div id="anu-masters-projects" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> ANU: Masters Projects</h3>
+</div>
+</div>
+<div id="community-projects" class="section level2">
+<h2><span class="header-section-number">3.4</span> Community projects</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="methods.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
