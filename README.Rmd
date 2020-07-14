@@ -1,0 +1,74 @@
+# Calendar repository
+
+To begin with this repository contains the code and data needed to create timelines for the next 6 months of my life. This happens to include a series of side projects, my PhD finalisation and other small community projects. I have also included impacts of Covid19 and the council work I am undertaking over the year of 2020.
+
+## Baseline dataset
+
+The general dataset has to include the following:
+
+```{r}
+# import data
+# names/column headers 
+namedData <- 
+```
+
+The idea of a baseline dataset and the conceptual structure of a `tidyPipes` project are incorporated within the code here is well. 
+
+The idea about this project is it will allow graduates that do not commonly use `R`, `RStudio` and the other features of statistical computing using R to use this language to solve and breakdown other aspects of the graduate research path.
+
+### Additional data
+
+For each individual using this repository there will be a different collection of parameters that are important for there own personal research career. This is where the `tidyPipes` approach allows others (and future me) to develop additional calendars, timetables and projections for future projects.
+
+#### My additional data
+
+##### 1. Seedling in the ACT
+
+
+
+## Imputing data in the future
+
+
+
+This is an R shiny app to create calendar plot using ggplot2. 
+
+![](preview.png)
+
+This app requires the following R packages: `ggplot2, shiny, colourpicker`. Run app using `runApp("app.R")`. Click [here](https://roymf.shinyapps.io/calendar_planner/) to see a demo of this app. This link may not always be active.
+
+The app has been tested on:
+
+```
+> sessionInfo()
+R version 3.5.1 (2018-07-02)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 7 x64 (build 7601) Service Pack 1
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United Kingdom.1252 
+[2] LC_CTYPE=English_United Kingdom.1252   
+[3] LC_MONETARY=English_United Kingdom.1252
+[4] LC_NUMERIC=C                           
+[5] LC_TIME=English_United Kingdom.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] colourpicker_1.0 ggplot2_3.0.0    shiny_1.1.0     
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_0.12.18     pillar_1.3.0     compiler_3.5.1   later_0.7.3     
+ [5] plyr_1.8.4       bindr_0.1.1      tools_3.5.1      digest_0.6.15   
+ [9] jsonlite_1.5     tibble_1.4.2     gtable_0.2.0     pkgconfig_2.0.1 
+[13] rlang_0.2.1      rstudioapi_0.7   yaml_2.2.0       bindrcpp_0.2.2  
+[17] stringr_1.3.1    withr_2.1.2      dplyr_0.7.6      htmlwidgets_1.2 
+[21] grid_3.5.1       tidyselect_0.2.4 glue_1.3.0       R6_2.2.2        
+[25] reshape2_1.4.3   purrr_0.2.5      magrittr_1.5     scales_0.5.0    
+[29] promises_1.0.1   htmltools_0.3.6  rsconnect_0.8.8  assertthat_0.2.0
+[33] mime_0.5         xtable_1.8-2     colorspace_1.3-2 httpuv_1.4.5    
+[37] stringi_1.2.4    miniUI_0.1.1.1   lazyeval_0.2.1   munsell_0.5.0   
+[41] crayon_1.3.4  
+```

@@ -1,0 +1,52 @@
+---
+title: "Creating calendars with calendar"
+author: "Robin Lovelace"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Creating calendars with calendar}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+**calendar** allows you to read-in 'ical files' (which typically have the `.ics` filetype) with `ic_read()`.
+However, often it's useful to create your own `ical` object from scratch.
+The purpose of this vignette is to show how, with reference to a real-world application: creating a timetable for a new module.
+
+It assumes you've installed the package following instructions in the [README](https://github.com/ATFutures/calendar#installation) and have attached it as follows:
+
+```{r}
+library(calendar)
+```
+
+
+## Creating events
+
+The building blocks of most calendars the event.
+All events have a start point and an end point (unless they are an all day event) and a summary description.
+As shown in the example below, they also tend to contain other fields.
+
+```{r}
+# key:value pairs in an ical example:
+ic_list(ical_example)[[1]]
+```
+
+Fortunately you don't need to specify all of these when creating events because some will be created manually and some are not necessary.
+Events can be created as follows (this one creates a 5 day trip):
+
+```{r}
+library(calendar)
+s = as.POSIXct("2019-01-12")
+e = s + 60^2 * 24 *5
+event = ic_event(start = s, end = e , summary = "Research trip")
+event
+class(event)
+ic_character(event)
+```

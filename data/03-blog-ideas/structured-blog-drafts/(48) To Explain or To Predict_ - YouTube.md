@@ -1,40 +1,14 @@
-(48) To Explain or To Predict? - YouTube
 
-<a id="logo"></a><a id="logo"></a>[](https://www.youtube.com/ "YouTube Home")AU
 
-Skip navigation
 
-9+
 
-[](https://www.youtube.com/watch?v=Dusc7smwKGc "Next (SHIFT+n)")
+# To Explain or To Predict? time:`33:38 9 Dec 2014` [Galit Shmueli](https://www.youtube.com/channel/UCiO5ShvaPDsbw-3_zR3Ht6w)
 
-0:18 / 33:38
-
-# To Explain or To Predict?
-
-3,191 views
-
-•9 Dec 2014
-
-291ShareSave
-
-[![](../../_resources/6660bce0ca114406b5187bcecaccf69b.jpg)](https://www.youtube.com/user/ProfGalitShmueli)
-
-[Galit Shmueli](https://www.youtube.com/channel/UCiO5ShvaPDsbw-3_zR3Ht6w)
-
-4.54K subscribers
-
-Subscribe
-
-Talk at New England Symposium, 2010
-
-Show more
-
-Up next
-
-Autoplay
+Talk at New England Symposium, 2010 on <a id="logo"></a>[](https://www.youtube.com/ "YouTube Home")
 
 <a id="thumbnail"></a>[![](https://i.ytimg.com/vi/Dusc7smwKGc/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBPVlcs8lqvu3kz9JIPxyoaflZGnw)<br>20:32](https://www.youtube.com/watch?v=Dusc7smwKGc)
+
+## Resources
 
 [### Performance 4: Predictive metrics & charts<br>Galit Shmueli<br>3.5K views](https://www.youtube.com/watch?v=Dusc7smwKGc)
 
@@ -113,7 +87,3 @@ Autoplay
 <a id="thumbnail"></a>[](https://www.youtube.com/watch?v=f6nxcfbDfZo)
 
 [### What they don't tell you about entrepreneurship | Mark Leruste | TEDxCardiff<br>TEDx Talks<br>Recommended for you](https://www.youtube.com/watch?v=f6nxcfbDfZo)
-
-<a id="logo"></a>[](https://www.youtube.com/ "YouTube Home")AU
-
-<a id="thumbnail"></a>

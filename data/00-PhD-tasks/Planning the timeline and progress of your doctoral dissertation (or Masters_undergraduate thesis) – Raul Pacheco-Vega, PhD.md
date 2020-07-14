@@ -1,6 +1,6 @@
-Planning the timeline and progress of your doctoral dissertation (or Masters/undergraduate thesis) – Raul Pacheco-Vega, PhD
+# Planning the timeline and progress of your doctoral dissertation (or Masters/undergraduate thesis) – 
 
-[Skip to content](#content)
+Modified from [Raul Pacheco-Vega] PhD
 
 **[Raul Pacheco-Vega, PhD](http://www.raulpacheco.org/)**
 

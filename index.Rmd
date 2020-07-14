@@ -1,12 +1,22 @@
 ---
-title: "Planning days for the SRC"
+title: "My calender management"
 author: "Anthony Davidson"
 date: "02/07/2020"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
+<!-- ## Libraries needed -->
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+# myPaths <- .libPaths("C:/Program Files/R/R-4.0.1/library")
+# myPaths <- c(myPaths)
+# .libPaths(myPaths)  # add new path
+# .libPaths()
+
+# devtools::install_github("rstudio/bookdown-demo")
+knitr::opts_chunk$set(echo = F)
 
 ## load libraries
 library(ggplot2)
@@ -15,30 +25,348 @@ library(colourpicker)
 library(readxl)
 library(dplyr)
 library(readr)
+library(DT)
 #library(extrafont)
 #loadfonts()
+library(knitr)
 ```
 
 # Overview
 
-This is a short demo site to help with planning for the SRC for semester 2 2020.
+The problem with much of my time management now that I am attempting to work with the skills obtained during my PhD is that I have so many different projects running at/in different levels of development and collaboration.
+
+> This is my first attempt to apply my `tidyPipes` workflow (Figure above) to my project management and integrate this into my normal workflow. 
+
+Generally, this work is focused on writing the scripts to automate the intergration between emails, PhD timeline and other projects. To do this we need to import datasets and modify the structure of these imputs to match the information needed to contruct a timeline of tasks and objectives.
+
+## Introduction {.tabset}
+
+Navigating the path between graduate studies and an academic career is adiffucult task at the best of times. One of the key steps in becoming a setablish researcher in the current academic enviroment. To do this efficetifcely, time management is key, however when there are so many little projects running it can be hard to know what to work on. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics(path = "./img/TidyPipes-calenderJUL2020.png")
+```
+
+This document is to record the method to proposing my 6month timeline for my PhD completion, as well as, showing the key aspects of the `tidyPipes` approach to research and the draft project plan for the inveribrate work I am proposing to do with Ben Kefford's lab.
+
+### Data setup
+
+Generally the concept is to create a baseline dataset of information and then extend this using `dataspice` to create a tidy format of data that can then be modelled and visualised using the `tidyverse` suite of tools.
 
 ```{r}
+library(knitr)
+knitr::include_graphics(path = "./img/TidyPipes-calenderJUL2020v2.png")
+```
+
+### Visualisation
+
+*Creating timeline charts in R (Generating Timeline charts)*
+
+We will use *ggplot* function from *ggplot2* package to generate timeline charts. The following functions are used to add layers of details to the chart. Workout timeline with a heat-map of calories burnt with activity type
+
+Timeline charts can be used in a lot of applications like tracking equipment or a process status changes, resource availability & scheduling, project timelines, documenting start and end times of events. The beauty of ggplot2 package is that the code can be easily customized, and more details can be added to the plots.
+
+To do this I have created a calendar for each key project/impact/aspect of short-term timeline, objectives, as well as, my career and life projection. To begin with I need to create timelines and other project goals under covid19. I have put this into a single dataset called `dat` here.
+
+### Feedback loop
+
+To create the feedback loop (to get information back from supervisors) I have began to develop a interactive shiny app within the same structure as the baseline dataset so that there is limited coding needed to create the tidypipes "cycle" of community engagement.
+
+```{r}
+library(knitr)
+knitr::include_graphics(path = "./img/preview.png")
+```
+
+## Methods {.tabset}
+
+As computational work takes over our regular management of time over the tradional hard copy "diary". I like this because important information can not be left in the "local cafe" however as I have used "gmail", "outlook" and there suites of applications and tools for calenders I have muddled everything up and missed appointments etc. 
+
+To try and counter this I have developed a `tidypipes` workflow for my tasks, projects and other collarorations. See presentation [here](./assets/TidyPipes-calenderJUL2020.pptx).
+
+```{r include = FALSE}
 #import base dataset
 ## THis is a csv file of key start and finish dates. 
 ## This can then be intergrated with the calender app.
 #june2020
 
-datactions <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 2)
+data_actions <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 1)
+data_names <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 3)
+```
 
-datadets <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 3)
+### Data/information {.tabset}
 
-datCSV1 <- read_csv("./data/Sem-two-planning.csv")
-datCSV1
+```{r include=FALSE}
+library(shiny)
+library(visNetwork)
+# shiny::runApp(system.file("shiny", package = "visNetwork"))
+```
 
-str(datactions)
-str(datadets)
+Overall this is time series data. A good general tutorial for this sort of data is here on [youtube]("https://www.youtube.com/watch?v=uenWg7ZSu4Y"). There are several ways to visualise this data, below are two selected bits of code that do this. Overall there are two generalised datasets that may be helpful to other individuals for each project or combination of projects (for the APR for example).
+
+#### Plot 1
+
+```{r}
+
+```
+
+#### Plot 2
+
+```{r}
+
+```
+
+### Baseline dataset
+
+The data for this collection of tasks associated with timelines and targets. The baseline dataset is found in the `.xlsx` file named "baseline-dataset-calender.xlsx". This is the base file I have been adding information to when I change the overall structure of the calendar projects.
+
+#### `.xlsx`
+
+These are excel workbooks. For now this is very simple and works with the current version of excel files (2020). 
+
+Each "sheet" of the excel file contains a single projects information. This is then converted to a csv file when needed. In the future each project will have its own file that can be added to or modified in a shiny interactive web app.
+
+```{r}
+#excel read
+
+#number of sheets in project currently
+
+
+## Saved as csv's and imported as so below...
+```
+
+#### `.csv`
+
+Generally the data can be imported as a csv, or other form. 
+
+```{r}
+library(readr)
+emailsCalender1 <- read_csv("data/anuemails.CSV")
+#str(emailsCalender1)
+```
+
+#### `.iCal`
+
+For calendars in Outlook the file type is `iCal`. There are packages that deal with these files in R. There is alot of my development work in this section because I need a way to document all the council emails and other work that I have undertaken as part of the `COVID19` pandemic in Australia.
+
+```{r}
+#ical data
+#export 
+```
+
+##### `ical` documentation [Robin Lovelace] calendar allows you to read-in `ical files` (which typically have the `.ics` filetype) with `ic_read()`. 
+
+However, often it’s useful to create your own `ical` object from scratch. The purpose of this vignette is to show how, with reference to a real-world application: creating a timetable for a new module.
+
+It assumes you’ve installed the package following instructions in the README and have attached it as follows:
+
+```{r}
+library(calendar)
+#> Warning: package 'calendar' was built under R version 4.0.2
+```
+
+###### Creating events
+
+The building blocks of most calendars the event. All events have a start point and an end point (unless they are an all day event) and a summary description. As shown in the example below, they also tend to contain other fields.
+
+```{r}
+# key:value pairs in an ical example:
+ic_list(ical_example)[[1]]
+#>  [1] "DTSTART:20180809T160000Z"                 
+#>  [2] "DTEND:20180809T163000Z"                   
+#>  [3] "DTSTAMP:20180810T094100Z"                 
+#>  [4] "UID:1119ejg4vug5758527atjcrqj3@google.com"
+#>  [5] "CREATED:20180807T133712Z"                 
+#>  [6] "DESCRIPTION:\\n"                          
+#>  [7] "LAST-MODIFIED:20180807T133712Z"           
+#>  [8] "LOCATION:"                                
+#>  [9] "SEQUENCE:0"                               
+#> [10] "STATUS:CONFIRMED"                         
+#> [11] "SUMMARY:ical programming mission"         
+#> [12] "TRANSP:OPAQUE"
+```
+
+Fortunately you don’t need to specify all of these when creating events because some will be created manually and some are not necessary. Events can be created as follows (this one creates a 5 day trip):
+
+```{r}
+library(calendar)
+s = as.POSIXct("2019-01-12")
+e = s + 60^2 * 24 *5
+event = ic_event(start = s, end = e , summary = "Research trip")
+event
+#> # A tibble: 1 x 4
+#>   UID                         DTSTART             DTEND               SUMMARY   
+#>   <chr>                       <dttm>              <dttm>              <chr>     
+#> 1 ical-6742dca9-cef7-4377-9c~ 2019-01-12 00:00:00 2019-01-17 00:00:00 Research ~
+class(event)
+#> [1] "ical"       "tbl_df"     "tbl"        "data.frame"
+ic_character(event)
+#>  [1] "BEGIN:VCALENDAR"                              
+#>  [2] "PRODID:-//ATFutures/ical //EN"                
+#>  [3] "VERSION:2.0"                                  
+#>  [4] "CALSCALE:GREGORIAN"                           
+#>  [5] "METHOD:PUBLISH"                               
+#>  [6] "BEGIN:VEVENT"                                 
+#>  [7] "UID:ical-6742dca9-cef7-4377-9c05-7bc4913eaacb"
+#>  [8] "DTSTART:20190112T000000"                      
+#>  [9] "DTEND:20190117T000000"                        
+#> [10] "SUMMARY:Research trip"                        
+#> [11] "END:VEVENT"                                   
+#> [12] "END:VCALENDAR"
+```
+
+### Summarised actions
+
+These sources of data are combined for my general timeline below.
+
+```{r}
+# DT::datatable(emailsCalender1)
+## handmade data
+DT::datatable(data_actions)
+```
+
+## Timeline {.tabset}
+
+One of the tricky bits about timelines is the format of the date and time of each event. This is different for each event so therefore we have four columns to incorporate this information in the following from for this repository and database. This will also mean that some of the information in other formats will have to be converted into these dimension and any other elements defined in each dataset I am combining to make a overall timeline.
+
+### Overall timeline
+
+By integrating these stage with some `dataspice` code/approach's allows for me to generate metadata from each sheet of the excel file quickly using R. Here are the steps to do this.
+
+```{r}
+#dataspice from github
+library(dataspice)
+
+#each project needs to be imported and then saved as csv in raw_data file to document variable names etc correctly into the json dataset.
+# raw_data <- 
+project2 <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 4)
+project2
+#date
+
+#time
+
+#location
+
+```
+
+### Figures
+
+These can be generated using `ggplot` and other `tidyverse` approaches due to the implantation of the `dataspice` packages above.
+
+```{r}
+library(ggplot2)
+
+```
+
+## Individual projects {.tabset}
+
+Each of my tasks come from a collection of overall projects I collaborate on and develop code with on timeframes that range from monthly to undefined. The current projects I have integrated into my timeline are:
+
+### PhD
+
+Over the duration of my PhD I have currently developed my thesis and publications to align with a 6 month hand-in date from the 1st July 2020.
+
+```{r}
+project1 <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 3)
+
+DT::datatable(head(project1))
+```
+
+
+
+#### Introduction
+
+#### Methods
+
+#### Conclusion
+
+#### Discussion
+
+
+
+### Previous achievements and tasks
+
+```{r}
+
+```
+
+
+
+## Council tasks {.tabset}
+
+Being nominated to represent the Graduate community on the University of Canberra Council in November 2019 was a great honour. At the time I did understand the impact of 
+
+```{r}
+project2 <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 4)
+
+DT::datatable(head(project2))
+```
+
+### UC-Council
+
+Generally it is regarded that there will be about a week (40hrs) of background reading and investigation before each council meeting. Under covid19 conditions I think this may be much greater.
+
+Here are the general tasks and overall timetable of the Council obligations in 2020:
+
+```{r}
+dataCouncil <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 3)
+
+DT::datatable(head(dataCouncil))
+```
+
+### UC-SRC
+
+This is a short demo site to help with planning for the SRC for semester 2 2020.
+
+```{r}
+
 
 
 ```
 
+### Supporting Reproducibility at UC
+
+My Phd studies put me in a unique situation where I can apply the tools and computational development I have done with my PhD and conceptually test the framework for the application in the education sector. 
+
+- `UCdown`
+- `councilCOMOS`
+- `UCSRC covid support`
+
+## UC-Invertebrates
+
+This work has its own repository so far.
+
+
+```{r}
+project3 <- readxl::read_excel("./data/Sem two planning.xlsx", sheet = 5)
+
+DT::datatable(head(project3))
+```
+
+
+
+## Additional tasks {.tabset}
+
+During Covid19 I have undertaken other additional learning and development tasks to keep me informed for my positions on Council and for my PhD work.
+
+### Courses
+
+
+
+| Course Name                                                  | Enrolment Date   | Paid       | Y/N  | Grade Achieved |
+| ------------------------------------------------------------ | ---------------- | ---------- | ---- | -------------- |
+| Using clinical health data for better healthcare             | 2019-07-01       | N          | 0.00 |                |
+| A Life of Happiness and Fulfillment                          | 2020-04-04       | N          | 0.00 |                |
+| Science Matters: Let's Talk About COVID-19                   | 2020-04-03       | N          | 0.00 |                |
+| Reproducible Research                                        | 2020-04-21       | N          | 0.00 |                |
+| Understanding Clinical Research: Behind the Statistics       | 2020-04-04       | N          | 0.00 |                |
+| The Science of Well-Being                                    | 2020-04-21       | N          | 0.00 |                |
+| Learning How to Learn: Powerful mental tools to help you master tough subjects | 2020-04-04       | N          | 0.00 |                |
+| Mindshift: Break Through Obstacles to Learning and Discover Your | Hidden Potential | 2020-04-04 | N    | 0.00           |
+| Mountains 101                                                | 2020-04-04       | N          | 0.00 |                |
+| Machine Learning                                             | 2020-04-04       | N          | 0.00 |                |
+
+### Seminars
+
+
+
+### Community projects
