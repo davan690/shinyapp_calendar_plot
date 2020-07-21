@@ -4,7 +4,7 @@ Need help?
 
 [Skip to content](#INSERT_CONTENT_ID_HERE)
 
-[<img width="335" height="50" src="../_resources/ba1d2d6fcb50453b85c241cc7d2652f3.png"/>](https://www.ala.org.au/)
+[<img width="335" height="50" src="./_resources/ba1d2d6fcb50453b85c241cc7d2652f3.png"/>](https://www.ala.org.au/)
 
 [Contact us](https://www.ala.org.au/contact-us/)
 
@@ -53,7 +53,7 @@ Need help?
 - [Sequences](#sequences)
 - [Data Partners](#data-partners)
 
-[<img width="470" height="360" src="../_resources/5ac75f7a44a94cd48cb832e96ecb430d.jpg"/>](https://images.ala.org.au/image/proxyImageThumbnailLarge?imageId=814dbcdb-5467-4226-adc7-3e6e592d1a3c)
+[<img width="470" height="360" src="./_resources/5ac75f7a44a94cd48cb832e96ecb430d.jpg"/>](https://images.ala.org.au/image/proxyImageThumbnailLarge?imageId=814dbcdb-5467-4226-adc7-3e6e592d1a3c)
 
 [+](#gallery "More Photos")
 
