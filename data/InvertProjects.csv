@@ -1,13 +1,13 @@
-﻿eventCode,shortName,month,startDate,finishDate,startTime,endTime,description,project,ucX,week
-invert20200701001,firstMEET,july,1/07/2020,1/07/2020,9:00,15:00,Just the full length of time I need to finish my invert project,invert,,
-invert20200701002,secondMEET,july,1/07/2020,3/08/2020,9:00,15:00,,invert,,
-invert20200701003,,,,,,,,,,
-invert20200701004,,,,,,,,,,
-invert20200701005,,,,,,,,,,
-invert20200701006,,,,,,,,,,
-invert20200701007,,,,,,,,,,
-invert20200701008,,,,,,,,,,
-invert20200701009,,,,,,,,,,
-invert202007010010,,,,,,,,,,
-invert202007010011,,,,,,,,,,
-invert202007010012,,,,,,,,,,
+﻿eventCode,shortName,month,startDate,finishDate,startTime,endTime,description,project,individualsNEEDED,week,year,milestone,status
+invert20200701001,emailCONTACT,july,1/07/2020,1/07/2020,10:00,12:00,General email proposing opportunity to several students,invert,NO,1,2020,invertmilestone1,Complete
+invert20200701002,firstMEET,july,8/07/2020,8/08/2020,10:00,11:00,Did not happen. Looked at project instead,invert,NO,2,2020,invertmilestone2,Complete
+invert20200701003,secondMEET,july,15/07/2020,15/07/2020,10:00,11:00,"Ben, Dani and Anthony. No data yet. Ben will send",invert,NO,3,2020,invertmilestone3,Missed
+invert20200701004,setupProject,july,17/07/2020,17/07/2020,9:00,13:00,Setup git and other simple R scripts,invert,NO,3,2020,invertmilestone4,Complete
+invert20200701005,thirdMEETING,july,23/07/2020,23/07/2020,14:00,16:00,Discussed the complexity of  the project and the importance of consise and strong background understanding before analysis to be undertaken. (Don’t have correct dataset yet),invert,NO,3,2020,invertmilestone5,On Target
+invert20200701006,setupProject,july,24/07/2020,24/07/2020,9:00,13:00,Working in timesheets and project overview,invert,NO,4,2020,invertmilestone6,On Target
+invert20200701007,Research,july,25/07/2020,27/07/2020,9:00,11:00,Doing some background reading to get up to speed,invert,NO,4,2020,invertmilestone7,On Target
+invert20200701008,fourthMEETING,july,29/07/2020,29/07/2020,14:00,16:00,general catch-up,invert,NO,5,2020,invertmilestone8,On Target
+invert20200701009,fifthMEETING,august,5/08/2020,5/08/2020,14:00,16:00,general catch-up,invert,NO,6,2020,invertmilestone9,On Target
+invert20200701010,sixthMEETING,august,12/08/2020,12/08/2020,14:00,16:00,general catch-up,invert,NO,7,2020,invertmilestone10,On Target
+invert20200701011,seventhMEETING,august,19/08/2020,19/08/2020,14:00,16:00,general catch-up,invert,NO,8,2020,invertmilestone11,On Target
+invert20200701012,eighthMEETING,august,26/08/2020,26/08/2020,14:00,16:00,general catch-up,invert,NO,9,2020,invertmilestone12,On Target

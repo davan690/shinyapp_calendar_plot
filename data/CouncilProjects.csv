@@ -1,23 +1,45 @@
-﻿eventCode,shortName,month,startDate,finishDate,startTime,endTime,description,project,ucX,week
-scr20200701001,WorldRefDay,june,20/06/2020,20/06/2020,9:00,15:00,World Refugee Day,src,,
-scr20200701002,Oweek,july,27/07/2020,31/07/2020,9:00,22:00,O week for semester two,src,,
-scr20200701003,ReasonStatement,august,1/08/2020,,9:00,15:00,Statement of reasons due (late Aug),src,,
-scr20200701004,SSAFsurvey,august,1/08/2020,,9:00,15:00,SSAF Survey,src,,
-scr20200701005,TownHall2,august,1/08/2020,,9:00,15:00,Town HAll,src,,
-scr20200701006,openDay,august,1/08/2020,,9:00,15:00,Open Day 22nd,src,,
-scr20200701007,nic21st,august,1/08/2020,,,15:00,Nicks 21st Birthday,src,,
-scr20200701008,SSAFbids,september,1/09/2020,,9:00,15:00,SSAF Bids Due,src,,
-scr20200701009,Grad,september,1/09/2020,,9:00,15:00,Graduation,src,,
-scr20200701010,SSAFFunds,september,1/09/2020,,,,SSAF Committeess,src,,
-scr20200701011,RUOKDay,september,1/09/2020,,,,RUOKDay,src,,
-scr20200701012,NAIDOC,october,1/10/2020,,,,NAIDOC,src,,
-scr20200701013,mentalHealth,october,1/10/2020,,,,Mental Health Day/Month,src,,
-scr20200701014,Exams,november,1/11/2020,,,,Exams,src,,
-scr20200701015,Results,november,1/11/2020,,,,Results,src,,
-scr20200701016,councilReport,december,1/12/2020,,,,Council Report,src,,
-scr20200701017,SSAFacq,december,1/12/2020,,,,SSAF Acquittal,src,,
-scr20200701018,disabilityDay,december,12/03/2020,12/03/2020,,,International disability day,src,,
-scr20200701019,,,,,,,,,,
-council20200701001,,,,,,,,,,
-council20200701002,,,,,,,,,,
-council20200701003,,,,,,,,,,
+﻿eventCode,shortName,month,startDate,finishDate,startTime,endTime,description,project,individualsNEEDED,week,year,milestone,status
+scr20200701026,AcademicBoard,august,5/08/2020,5/08/2020,9:00,15:00,Academic Board (Majid/Josh),src,,,2020,srcmilestone26,On Target
+council20200701001,CouncilReading,august,21/08/2020,28/08/2020,9:00,15:00,,src,Anthony,,2020,srcmilestone32,On Target
+council20200701006,CouncilSITTING,august,28/08/2020,28/08/2020,9:00,17:00,,council,Emma; Anthony,,2020,srcmilestone39,On Target
+scr20200701007,nic21st,august,1/08/2020,1/08/2020,13:00,15:00,Nicks 21st Birthday,src,,,2020,srcmilestone7,On Target
+scr20200701006,openDay,august,1/08/2020,1/08/2020,9:00,15:00,Open Day 22nd,src,,,2020,srcmilestone6,On Target
+scr20200701003,ReasonStatement,august,1/08/2020,1/08/2020,9:00,15:00,Statement of reasons due (late Aug),src,,,2020,srcmilestone3,On Target
+scr20200701004,SSAFsurvey,august,1/08/2020,1/08/2020,9:00,15:00,SSAF Survey,src,,,2020,srcmilestone4,On Target
+scr20200701005,TownHall2,august,1/08/2020,1/08/2020,9:00,15:00,Town HAll,src,,,2020,srcmilestone5,On Target
+scr20200701025,Wk1,august,3/08/2020,10/08/2020,9:00,15:00,Wk 1,src,,1,2020,srcmilestone25,On Target
+scr20200701016,councilReport,december,1/12/2020,1/12/2020,9:00,15:00,Council Report,src,,,2020,srcmilestone16,On Target
+council20200701006,CouncilSITTING,december,11/12/2020,11/12/2020,9:00,17:00,,council,Emma; Anthony,,2020,srcmilestone41,On Target
+scr20200701018,disabilityDay,december,12/03/2020,12/03/2020,9:00,15:00,International disability day,src,,,2020,srcmilestone18,On Target
+scr20200701017,SSAFacq,december,1/12/2020,1/12/2020,9:00,15:00,SSAF Acquittal,src,,,2020,srcmilestone17,On Target
+scr20200701041,UEC,december,2/12/2020,2/12/2020,9:00,15:00,UEC (Josephine),src,Josephine,,2020,srcmilestone51,On Target
+scr20200701002,Oweek,july,27/07/2020,31/07/2020,9:00,22:00,O week for semester two,src,,,2020,srcmilestone2,Complete
+scr20200701023,UEC,july,15/07/2020,15/07/2020,9:00,15:00,UEC (Josephine),src,Josephine,,2020,srcmilestone23,Complete
+scr20200701024,URC,july,16/07/2020,16/07/2020,9:00,15:00,URC,src,,,2020,srcmilestone24,Complete
+scr20200701022,Wtcensus,july,9/07/2020,9/07/2020,9:00,15:00,WT Census,src,census,,2020,srcmilestone22,Complete
+scr20200701019,AcademicBoard,june,3/06/2020,3/06/2020,9:00,15:00,Academic Board (Majid/Josh),src,Majid; Josh,,2020,srcmilestone19,Complete
+scr20200701020,AcademicIntegrity,june,4/06/2020,4/06/2020,9:00,15:00,Academic Integrity Mtg (Lola/Hamish/Nick)                               Student Equity & Advisory Group (TBD),src,Lola; Hamish; Nick,,2020,srcmilestone20,Complete
+scr20200701021,GradesReleased,june,17/06/2020,17/06/2020,9:00,15:00,Grades released for previous term. Issues with Protorial,src,students,,2020,srcmilestone21,Complete
+scr20200701001,WorldRefDay,june,20/06/2020,20/06/2020,9:00,15:00,World Refugee Day,src,,,2020,srcmilestone1,Complete
+scr20200701040,AcademicBoard,november,18/11/2020,18/11/2020,9:00,15:00,Academic Board (Josh/Majid),src,,,2020,srcmilestone50,On Target
+scr20200701014,Exams,november,1/11/2020,1/11/2020,9:00,15:00,Exams,src,,,2020,srcmilestone14,On Target
+scr20200701039,NAIDOC,november,8/11/2020,8/11/2020,9:00,15:00,NAIDOC WEEK,src,,,2020,srcmilestone49,On Target
+scr20200701015,Results,november,1/11/2020,1/11/2020,9:00,15:00,Results,src,,,2020,srcmilestone15,On Target
+council20200701006,CouncilSITTING,october,23/10/2020,23/10/2020,9:00,17:00,,council,Emma; Anthony,,2020,srcmilestone40,On Target
+scr20200701030,mentalHealth,october,10/10/2020,10/10/2020,9:00,15:00,,src,,,2020,srcmilestone30,On Target
+scr20200701012,NAIDOC,october,1/10/2020,1/10/2020,9:00,15:00,NAIDOC,src,,,2020,srcmilestone12,On Target
+scr20200701031,SRCmeeting,october,22/10/2020,22/10/2020,9:00,15:00,Student council meeting,src,all council members,,2020,srcmilestone31,On Target
+scr20200701038,UAC,october,29/10/2020,29/10/2020,9:00,17:00,UAC (Josephine),src,Josephine,,2020,srcmilestone48,On Target
+scr20200701037,UEC,october,28/10/2020,28/10/2020,9:00,17:00,UEC (Josephine),src,Josephine,,2020,srcmilestone47,On Target
+scr20200701036,URC,october,22/10/2020,22/10/2020,9:00,17:00,URC,src,,,2020,srcmilestone46,On Target
+scr20200701029,AcademicBoard,september,30/09/2020,30/09/2020,9:00,15:00,Academic Board (Majid/Josh),src,,,2020,srcmilestone29,On Target
+scr20200701032,CensusDate,september,4/09/2020,4/09/2020,9:00,15:00,Census Date,src,,,2020,srcmilestone42,On Target
+scr20200701009,Grad,september,1/09/2020,1/09/2020,9:00,15:00,Graduation,src,,,2020,srcmilestone9,On Target
+scr20200701011,RUOKDay,september,1/09/2020,1/09/2020,9:00,15:00,RUOKDay,src,,,2020,srcmilestone11,On Target
+scr20200701027,SRCmeeting,september,3/09/2020,3/09/2020,9:00,15:00,Student council meeting,src,all council members,,2020,srcmilestone27,On Target
+scr20200701028,SRCreading,september,3/09/2020,3/09/2020,9:00,15:00,Student council meeting,src,all council members,,2020,srcmilestone28,On Target
+scr20200701008,SSAFbids,september,1/09/2020,1/09/2020,9:00,15:00,SSAF Bids Due,src,,,2020,srcmilestone8,On Target
+scr20200701010,SSAFFunds,september,1/09/2020,1/09/2020,9:00,15:00,SSAF Committeess,src,,,2020,srcmilestone10,On Target
+scr20200701034,UAC,september,10/09/2020,10/09/2020,9:00,15:00,UAC (Josephine) RUOK Day,src,Josephine,,2020,srcmilestone44,On Target
+scr20200701033,UEC,september,9/09/2020,9/09/2020,9:00,15:00,UEC (Josephine),src,Josephine,,2020,srcmilestone43,On Target
+scr20200701035,AcademicBoard,september,30/09/2020,30/09/2020,9:00,15:00,Academic Board (Josh/Majid),src,,,2020,srcmilestone45,On Target

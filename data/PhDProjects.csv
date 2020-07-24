@@ -1,10 +1,15 @@
-﻿eventCode,shortName,month,startDate,finishDate,startTime,endTime,description,project,ucX,week
-phd20200701001,FullPhDleft,july,1/07/2020,31/12/2020,9:00,15:00,Just the full length of time I need to finish my PhD project,PhD,,
-phd20200701013,ScholarShip_end,june,7/07/2020,9/07/2020,,,,PhD,,
-phd20200701002,MethodsPhD,august,1/08/2020,3/08/2020,9:00,15:00,,PhD,,
-phd20200701003,DiscussionPhDleft,september,1/09/2020,6/03/2020,9:00,15:00,,PhD,,
-phd20200701004,tidyPipesPhD,october,1/10/2020,8/10/2019,9:00,15:00,,PhD,,
-phd20200701005,natureleft,november,1/11/2020,11/05/2019,9:00,15:00,,PhD,,
-phd20200701006,submit,december,31/12/2020,31/12/2018,,15:00,,PhD,,
-,,,,,,,,,,
-,,,,,,,,,,
+﻿eventCode,shortName,month,startDate,finishDate,startTime,endTime,description,project,individualsNEEDED,week,year,milestone,status,PreCovidDATE,Tasks ,Notes
+phd20200701001,FullPhDleft,july,1/07/2020,31/12/2020,9:00,15:00,Just the full length of time I think I will need to finish my PhD project,PhD,Anthony,,2020,PhDmilestone 1,On Target,31/07/2020,Comments on reproducibility,Comment to nature draft attached
+phd20200701013,ScholarShip_end,june,7/07/2020,9/07/2020,,,When my scholarship finished,PhD,Anthony,,2020,PhDmilestone 2,Complete,2/11/2019, finish beech draft,Currently with Richard
+phd20200701002,MethodsPhD,august,1/08/2020,3/08/2020,9:00,15:00,The core methods papers in the final drafts ready for submission. Reproducibility framework (tidyPipes) and the invasive nz mamals database.,PhD,Anthony,,2020,PhDmilestone 3,On Target,5/11/2019,2020 draft MPD paper1 simulation and/or case study results? ,This progress on this is underway
+phd20200701003,DiscussionPhDleft,september,1/09/2020,6/03/2020,9:00,15:00,Building the wrapping publication on the application of the invasive species database for community groups and researchers.,PhD,Anthony,,2020,PhDmilestone 4,On Target,,Working on this in conjunction with first and final thesis chapters around the value of computational reproducibility at a national scale like PFNZ2050,
+phd20200701004,tidyPipesPhD,october,23/07/2020,8/10/2019,9:00,15:00,,PhD,Anthony,,2020,PhDmilestone 5,On Target,, draft MPD paper2 case study results?,
+phd20200701005,natureMANUSCRIPT,july,1/11/2020,11/05/2019,9:00,15:00,Rejected: submit 300 word comment.,PhD,Anthony,,2020,PhDmilestone 6,Complete,6/11/2019,,
+phd20200701006,submit,december,31/12/2020,31/12/2018,,15:00,DONE ON THIS DAY…,PhD,Anthony,,2020,PhDmilestone 7,Critical,7/11/2019,,
+phd20200701007,BeechManuscript,november,1/11/2020,15/08/2020,,,Beech paper manuscript with Richard Currently,PhD,Anthony,,2019,PhDmilestone 8,Complete,8/11/2019,Introduction circulated submit mpd paper1,
+phd20200701008,MPDmanuscript,august,15/08/2020,15/09/2020,,,Second manuscript to PhD on mixed bayesian models,PhD,Anthony,,2020,PhDmilestone 9,At Risk,9/11/2019,MPD paper1 comments ready for feedback and assessment on whether to take 6months off to hand in or not? ,HOPEFULLY timeframes are optomidtic at best
+phd20200701009,Repropaper,july,1/06/2020,20/06/2020,,,tidyPipes paper draft,PhD,Anthony,,2020,PhDmilestone 10,At Risk,,,
+phd20200701010,FINALseminar,november,11/01/2020,11/01/2020,,,Final talk for my PhD work,PhD,Anthony,,2020,PhDmilestone 11,Complete,1/11/2019,,
+phd20200701011,WorkINprogress,august,15/08/2020,15/09/2020,,,Work in Progress seminar,PhD,Anthony,,2020,PhDmilestone 12,At Risk,,,
+phd20200701012,GEM seminar,august,21/08/2020,21/08/2020,,,Departmental seminar,PhD,Anthony,,2020,PhDmilestone 13,At Risk,,,
+phd20200701013,InvasiveSPPdatabase,,,,,,,,,,,,,,,

@@ -1,0 +1,15 @@
+---
+title: "Timeline"
+---
+
+# Timeline
+
+| Proposed Activities   |             |         |           |           |         |          |          |            |               |             |              |              |
+| --------------------- | ----------- | ------- | --------- | --------- | ------- | -------- | -------- | ---------- | ------------- | ----------- | ------------ | ------------ |
+| **Months**            | **January** | **Feb** | **march** | **April** | **May** | **June** | **July** | **August** | **September** | **October** | **November** | **December** |
+| Research proposal     |             |         |           |           |         |          |          |            |               |             |              |              |
+| Fieldwork preparation |             |         |           |           |         |          |          |            |               |             |              |              |
+| Conducting fieldwork  |             |         |           |           |         |          |          |            |               |             |              |              |
+| Data analysis         |             |         |           |           |         |          |          |            |               |             |              |              |
+| Thesis write-up       |             |         |           |           |         |          |          |            |               |             |              |              |
+|                       |             |         |           |           |         |          |          |            |               |             |              |              |

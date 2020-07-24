@@ -1,0 +1,219 @@
+---
+title: "Importing Outlook data"
+author: "Anthony Davidson"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# `.iCal` data
+
+Outlook using iCal files to add appointments and meetings into the outlook calender. Often these files are generated to be added to my calender. These scripts import and re-arrange data into a tidy format. I have defined a baseline database that consists of three key outputs divided by projects:
+
+## Actions
+
+
+## Timeline
+
+## Project summaries
+
+[coming]
+
+### `.iCal`
+
+For calendars in Outlook the file type is `iCal`. There are only two packages I can find that deal with `.iCal` files in R (`calendar` and `iCal`).
+
+```{r}
+#ical data
+library(calendar)
+
+f <- system.file("extdata", "england-and-wales.ics", package = "calendar")
+
+ics_df <- ic_read(f)
+
+names(ics_df)
+
+head(ics_df)
+
+vapply(ics_df, class, character(1))
+
+my_cal = ic_dataframe("./data/exportOUTLOOK.ics")
+dat1 <-ic_read("./data/exportOUTLOOK.ics")
+ic_dataframe(dat1)
+my_cal
+#> [1] "In Budapest for European R Users Meeting (eRum) conference"
+# calculate the duration of the European R users meeting event:
+my_cal$`DTEND;VALUE=DATE`[1] - my_cal$`DTSTART;VALUE=DATE`[1]
+#> Time difference of 4 days
+
+# ?ic_read()
+#export 
+list.files(path = "./data/", pattern = "ics")
+
+dat1 <-ic_read("./data/exportOUTLOOK.ics")
+dat1 <- ic_list(dat1)
+names[dat1]
+
+dat2 <-ic_read("./data/Personal time allocation Calendar.ics")
+dat2
+
+dat3 <-ic_read("./data/england-and-wales.ics")
+dat3
+
+names(dat1)
+names(dat2)
+names(dat3)
+
+```
+
+### Outlook API
+
+```{r}
+library(RODBC)
+library(checkpoint)
+# checkpoint("2016-01-01")
+```
+
+#### Azure API access
+
+`r #install.packages("AzureGraph")`. Alternatively, you can install the development version from GitHub via `r devtools::install_github("cloudyr/AzureGraph")`.
+
+```{r}
+#issues with MCAN microsoft CRAN and RStudio
+#july2020
+
+# jose
+devtools::install_github("Azure/AzureRMR")
+
+# rappdirs
+devtools::install_github("Azure/AzureRMR")
+
+devtools::install_github("Azure/AzureRMR")
+devtools::install_github("Azure/AzureGraph")
+
+devtools::install_github("Azure/AzureAuth")
+library(AzureRMR)
+library(AzureGraph)
+
+# authenticate with AAD
+# - on first login, call create_graph_login()
+# - on subsequent logins, call get_graph_login()
+gr <- create_graph_login()
+
+# account of the logged-in user (if you authenticated via the default method)
+me <- gr$get_user()
+
+# alternative: supply an email address or GUID
+me2 <- gr$get_user("hongooi@microsoft.com")
+
+# IDs of my groups
+head(me$list_group_memberships)
+#> [1] "98326d14-365a-4257-b0f1-5c3ce3104f75" "b21e5600-8ac5-407b-8774-396168150210"
+#> [3] "be42ef66-5c13-48cb-be5c-21e563e333ed" "dd58be5a-1eac-47bd-ab78-08a452a08ea0"
+#> [5] "4c2bfcfe-5012-4136-ab33-f10389f2075c" "a45fbdbe-c365-4478-9366-f6f517027a22"
+
+# a specific group
+(grp <- gr$get_group("82d27e38-026b-4e5d-ba1a-a0f5a21a2e85"))
+#> <Graph group 'AIlyCATs'>
+#>   directory id: 82d27e38-026b-4e5d-ba1a-a0f5a21a2e85
+#>   description: ADS AP on Microsoft Teams.
+#> - Instant communication.
+#> - Share files/links/codes/...
+#> - Have fun. :)
+
+```
+
+##### StepbyStep `ical` data 
+
+The two key developers of these packages are:
+[Robin Lovelace] 
+
+`Calendar` allows you to read-in `ical files` (which typically have the `.ics` filetype) with `ic_read()`. 
+
+```{r}
+
+```
+
+###### My data
+
+```{r}
+
+
+
+s = as.POSIXct("2019-01-12")
+e = s + 60^2 * 24 *5
+event = ic_event(start = s, end = e , summary = "Research trip")
+# event
+names(event)
+```
+
+```{r}
+# key:value pairs in an ical example:
+ic_list(ical_example)[[1]]
+#>  [1] "DTSTART:20180809T160000Z"                 
+#>  [2] "DTEND:20180809T163000Z"                   
+#>  [3] "DTSTAMP:20180810T094100Z"                 
+#>  [4] "UID:1119ejg4vug5758527atjcrqj3@google.com"
+#>  [5] "CREATED:20180807T133712Z"                 
+#>  [6] "DESCRIPTION:\\n"                          
+#>  [7] "LAST-MODIFIED:20180807T133712Z"           
+#>  [8] "LOCATION:"                                
+#>  [9] "SEQUENCE:0"                               
+#> [10] "STATUS:CONFIRMED"                         
+#> [11] "SUMMARY:ical programming mission"         
+#> [12] "TRANSP:OPAQUE"
+```
+
+```{r}
+#import a ical file/or two
+
+list.files(pattern = ".iCal", path = "./data/")
+```
+
+`Calendar` also offers a function to create your own simple `ical` object from scratch.
+
+```{r}
+# create event
+
+```
+
+###### Creating events
+
+The building blocks of most calendars the event. All events have a start point and an end point (unless they are an all day event) and a summary description. As shown in the example below, they also tend to contain other fields. Fortunately you don’t need to specify all of these when creating events because some will be created manually and some are not necessary. Events can be created as follows (this one creates a 5 day trip):
+
+```{r}
+library(calendar)
+s = as.POSIXct("2019-01-12")
+e = s + 60^2 * 24 *5
+event = ic_event(start = s, end = e , summary = "Research trip")
+event
+#> # A tibble: 1 x 4
+#>   UID                         DTSTART             DTEND               SUMMARY   
+#>   <chr>                       <dttm>              <dttm>              <chr>     
+#> 1 ical-6742dca9-cef7-4377-9c~ 2019-01-12 00:00:00 2019-01-17 00:00:00 Research ~
+class(event)
+#> [1] "ical"       "tbl_df"     "tbl"        "data.frame"
+ic_character(event)
+#>  [1] "BEGIN:VCALENDAR"                              
+#>  [2] "PRODID:-//ATFutures/ical //EN"                
+#>  [3] "VERSION:2.0"                                  
+#>  [4] "CALSCALE:GREGORIAN"                           
+#>  [5] "METHOD:PUBLISH"                               
+#>  [6] "BEGIN:VEVENT"                                 
+#>  [7] "UID:ical-6742dca9-cef7-4377-9c05-7bc4913eaacb"
+#>  [8] "DTSTART:20190112T000000"                      
+#>  [9] "DTEND:20190117T000000"                        
+#> [10] "SUMMARY:Research trip"                        
+#> [11] "END:VEVENT"                                   
+#> [12] "END:VCALENDAR"
+```

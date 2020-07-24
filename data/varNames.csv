@@ -1,0 +1,11 @@
+﻿eventCode,name of unique project/aspect of calender
+shortName,quick name of container/dataset
+month,month of the year
+startDate,Start date of project
+finishDate,End date of project
+startTime,Start of time 
+endTime,End of time
+description,A description of the information obtained in this project
+src,Is this part of the council work?
+ucX,Work part
+week,what week is this project worked

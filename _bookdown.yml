@@ -2,6 +2,6 @@ book_filename: "Managing multiple calendars in RStudio using `tidyPipes`."
 chapter_name: "Chapter "
 repo: https://github.com/seankross/bookdown-start
 output_dir: docs
-rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Diving-In.Rmd", "03-Work-In-Progress.Rmd", "04-Work-In-Progressv2.Rmd", "05-Extra-Projects.Rmd"]
+rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Diving-In.Rmd", "03-Visualisation.Rmd", "03-Feedback.Rmd", "04-Output.Rmd", "05-Extra-Projects.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: yes

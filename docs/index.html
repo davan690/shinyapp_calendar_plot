@@ -4,27 +4,27 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>My calender management</title>
-  <meta name="description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <title>Personal calender management</title>
+  <meta name="description" content="Time management using the powers of R and Markdown." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="My calender management" />
+  <meta property="og:title" content="Personal calender management" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://seankross.com/bookdown-start/" />
+  <meta property="og:url" content="http://github.com/davan690/" />
   
-  <meta property="og:description" content="Everything you need (and nothing more) to start a bookdown book." />
-  <meta name="github-repo" content="seankross/bookdown-start" />
+  <meta property="og:description" content="Time management using the powers of R and Markdown." />
+  <meta name="github-repo" content="davan690/shinyapp_calendar_plot" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="My calender management" />
+  <meta name="twitter:title" content="Personal calender management" />
   
-  <meta name="twitter:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="twitter:description" content="Time management using the powers of R and Markdown." />
   
 
 <meta name="author" content="Anthony Davidson" />
 
 
-<meta name="date" content="2020-07-21" />
+<meta name="date" content="2020-07-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 
-<link rel="next" href="introduction.html"/>
+<link rel="next" href="intro.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +52,9 @@
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
 <script src="libs/datatables-binding-0.14/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -142,42 +145,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">A Minimal Bookdown Book</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a><ul>
-<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#data-setup"><i class="fa fa-check"></i><b>2.1</b> Data setup</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="methods.html"><a href="methods.html#datainformation"><i class="fa fa-check"></i><b>2.1.1</b> Data/information</a></li>
-<li class="chapter" data-level="2.1.2" data-path="methods.html"><a href="methods.html#manual-data-.csv-files"><i class="fa fa-check"></i><b>2.1.2</b> Manual data (<code>.csv</code> files)</a></li>
-<li class="chapter" data-level="2.1.3" data-path="methods.html"><a href="methods.html#xlsx"><i class="fa fa-check"></i><b>2.1.3</b> <code>.xlsx</code></a></li>
-<li class="chapter" data-level="2.1.4" data-path="methods.html"><a href="methods.html#csv"><i class="fa fa-check"></i><b>2.1.4</b> <code>.csv</code></a></li>
-<li class="chapter" data-level="2.1.5" data-path="methods.html"><a href="methods.html#ical-data"><i class="fa fa-check"></i><b>2.1.5</b> <code>.iCal</code> data</a></li>
-<li class="chapter" data-level="2.1.6" data-path="methods.html"><a href="methods.html#other-data"><i class="fa fa-check"></i><b>2.1.6</b> Other data</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#tidypipes-process"><i class="fa fa-check"></i><b>2.1</b> <code>tidyPipes</code> process</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#visualisation"><i class="fa fa-check"></i><b>2.2</b> Visualisation</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="methods.html"><a href="methods.html#individual-projects"><i class="fa fa-check"></i><b>2.2.1</b> Individual projects</a></li>
-<li class="chapter" data-level="2.2.2" data-path="methods.html"><a href="methods.html#phd"><i class="fa fa-check"></i><b>2.2.2</b> PhD</a></li>
-<li class="chapter" data-level="2.2.3" data-path="methods.html"><a href="methods.html#previous-achievements-and-tasks"><i class="fa fa-check"></i><b>2.2.3</b> Previous achievements and tasks</a></li>
-<li class="chapter" data-level="2.2.4" data-path="methods.html"><a href="methods.html#council-tasks"><i class="fa fa-check"></i><b>2.2.4</b> Council tasks</a></li>
-<li class="chapter" data-level="2.2.5" data-path="methods.html"><a href="methods.html#uc-invertebrates"><i class="fa fa-check"></i><b>2.2.5</b> UC-Invertebrates</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#feedback-loop"><i class="fa fa-check"></i><b>2.3</b> Feedback loop</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="overall-outputs.html"><a href="overall-outputs.html"><i class="fa fa-check"></i><b>3</b> Overall outputs</a><ul>
-<li class="chapter" data-level="3.1" data-path="overall-outputs.html"><a href="overall-outputs.html#timeline"><i class="fa fa-check"></i><b>3.1</b> Timeline</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="overall-outputs.html"><a href="overall-outputs.html#action-timeline"><i class="fa fa-check"></i><b>3.1.1</b> Action timeline</a></li>
-<li class="chapter" data-level="3.1.2" data-path="overall-outputs.html"><a href="overall-outputs.html#future-targets"><i class="fa fa-check"></i><b>3.1.2</b> Future targets</a></li>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a><ul>
+<li class="chapter" data-level="3.1" data-path="methods.html"><a href="methods.html#data-setup"><i class="fa fa-check"></i><b>3.1</b> Data setup</a></li>
+<li class="chapter" data-level="3.2" data-path="methods.html"><a href="methods.html#datainformation"><i class="fa fa-check"></i><b>3.2</b> Data/information</a></li>
+<li class="chapter" data-level="3.3" data-path="methods.html"><a href="methods.html#manual-data"><i class="fa fa-check"></i><b>3.3</b> Manual data</a></li>
+<li class="chapter" data-level="3.4" data-path="methods.html"><a href="methods.html#baseline"><i class="fa fa-check"></i><b>3.4</b> Baseline</a></li>
+<li class="chapter" data-level="3.5" data-path="methods.html"><a href="methods.html#xlsx"><i class="fa fa-check"></i><b>3.5</b> <code>.xlsx</code></a></li>
+<li class="chapter" data-level="3.6" data-path="methods.html"><a href="methods.html#csv"><i class="fa fa-check"></i><b>3.6</b> <code>.csv</code></a></li>
+<li class="chapter" data-level="3.7" data-path="methods.html"><a href="methods.html#ical-data"><i class="fa fa-check"></i><b>3.7</b> <code>.iCal</code> data</a></li>
+<li class="chapter" data-level="3.8" data-path="methods.html"><a href="methods.html#other-data"><i class="fa fa-check"></i><b>3.8</b> Other data</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="methods.html"><a href="methods.html#action-tasks"><i class="fa fa-check"></i><b>3.8.1</b> Action tasks</a></li>
+<li class="chapter" data-level="3.8.2" data-path="methods.html"><a href="methods.html#milestones-timeline"><i class="fa fa-check"></i><b>3.8.2</b> Milestones timeline</a></li>
+<li class="chapter" data-level="3.8.3" data-path="methods.html"><a href="methods.html#factoring"><i class="fa fa-check"></i><b>3.8.3</b> Factoring</a></li>
+<li class="chapter" data-level="3.8.4" data-path="methods.html"><a href="methods.html#direction"><i class="fa fa-check"></i><b>3.8.4</b> Direction</a></li>
+<li class="chapter" data-level="3.8.5" data-path="methods.html"><a href="methods.html#counts"><i class="fa fa-check"></i><b>3.8.5</b> Counts</a></li>
+<li class="chapter" data-level="3.8.6" data-path="methods.html"><a href="methods.html#buffering-times"><i class="fa fa-check"></i><b>3.8.6</b> Buffering times</a></li>
+<li class="chapter" data-level="3.8.7" data-path="methods.html"><a href="methods.html#decemberjanuary-only"><i class="fa fa-check"></i><b>3.8.7</b> December/January only</a></li>
+<li class="chapter" data-level="3.8.8" data-path="methods.html"><a href="methods.html#interactivity"><i class="fa fa-check"></i><b>3.8.8</b> Interactivity</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="extra-projects.html"><a href="extra-projects.html"><i class="fa fa-check"></i><b>4</b> Extra projects</a><ul>
-<li class="chapter" data-level="4.1" data-path="extra-projects.html"><a href="extra-projects.html#courses"><i class="fa fa-check"></i><b>4.1</b> Courses</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="extra-projects.html"><a href="extra-projects.html#coursa"><i class="fa fa-check"></i><b>4.1.1</b> Coursa</a></li>
+<li class="chapter" data-level="4" data-path="visualisation.html"><a href="visualisation.html"><i class="fa fa-check"></i><b>4</b> Visualisation</a><ul>
+<li class="chapter" data-level="4.1" data-path="visualisation.html"><a href="visualisation.html#ggplot2"><i class="fa fa-check"></i><b>4.1</b> <code>ggplot2</code></a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="extra-projects.html"><a href="extra-projects.html#seminars"><i class="fa fa-check"></i><b>4.2</b> Seminars</a></li>
-<li class="chapter" data-level="4.3" data-path="extra-projects.html"><a href="extra-projects.html#teaching"><i class="fa fa-check"></i><b>4.3</b> Teaching</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="extra-projects.html"><a href="extra-projects.html#anu-climate-change"><i class="fa fa-check"></i><b>4.3.1</b> ANU: Climate Change</a></li>
-<li class="chapter" data-level="4.3.2" data-path="extra-projects.html"><a href="extra-projects.html#anu-masters-projects"><i class="fa fa-check"></i><b>4.3.2</b> ANU: Masters Projects</a></li>
+<li class="chapter" data-level="5" data-path="feedback.html"><a href="feedback.html"><i class="fa fa-check"></i><b>5</b> Feedback loop</a></li>
+<li class="chapter" data-level="6" data-path="outputs.html"><a href="outputs.html"><i class="fa fa-check"></i><b>6</b> Overall outputs</a><ul>
+<li class="chapter" data-level="6.1" data-path="outputs.html"><a href="outputs.html#timeline"><i class="fa fa-check"></i><b>6.1</b> Timeline</a></li>
+<li class="chapter" data-level="6.2" data-path="outputs.html"><a href="outputs.html#activity"><i class="fa fa-check"></i><b>6.2</b> Activity</a></li>
+<li class="chapter" data-level="6.3" data-path="outputs.html"><a href="outputs.html#calendars"><i class="fa fa-check"></i><b>6.3</b> Calendars</a></li>
+<li class="chapter" data-level="6.4" data-path="outputs.html"><a href="outputs.html#plot-simple"><i class="fa fa-check"></i><b>6.4</b> Plot simple</a></li>
+<li class="chapter" data-level="6.5" data-path="outputs.html"><a href="outputs.html#final-plot-option-1"><i class="fa fa-check"></i><b>6.5</b> Final plot option 1</a></li>
+<li class="chapter" data-level="6.6" data-path="outputs.html"><a href="outputs.html#timeline-1"><i class="fa fa-check"></i><b>6.6</b> Timeline</a><ul>
+<li class="chapter" data-level="6.6.1" data-path="outputs.html"><a href="outputs.html#action-timeline"><i class="fa fa-check"></i><b>6.6.1</b> Action timeline</a></li>
+<li class="chapter" data-level="6.6.2" data-path="outputs.html"><a href="outputs.html#future-targets"><i class="fa fa-check"></i><b>6.6.2</b> Future targets</a></li>
+<li class="chapter" data-level="6.6.3" data-path="methods.html"><a href="methods.html#decemberjanuary-only"><i class="fa fa-check"></i><b>6.6.3</b> December/January only</a></li>
+<li class="chapter" data-level="6.6.4" data-path="outputs.html"><a href="outputs.html#individual-projects"><i class="fa fa-check"></i><b>6.6.4</b> Individual projects</a></li>
+<li class="chapter" data-level="6.6.5" data-path="outputs.html"><a href="outputs.html#phd"><i class="fa fa-check"></i><b>6.6.5</b> PhD</a></li>
+<li class="chapter" data-level="6.6.6" data-path="outputs.html"><a href="outputs.html#previous-achievements-and-tasks"><i class="fa fa-check"></i><b>6.6.6</b> Previous achievements and tasks</a></li>
+<li class="chapter" data-level="6.6.7" data-path="outputs.html"><a href="outputs.html#council-tasks"><i class="fa fa-check"></i><b>6.6.7</b> Council tasks</a></li>
+<li class="chapter" data-level="6.6.8" data-path="outputs.html"><a href="outputs.html#uc-invertebrates"><i class="fa fa-check"></i><b>6.6.8</b> UC-Invertebrates</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="extra-projects.html"><a href="extra-projects.html#community-projects"><i class="fa fa-check"></i><b>4.4</b> Community projects</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="extra-projects.html"><a href="extra-projects.html"><i class="fa fa-check"></i><b>7</b> Extra projects</a><ul>
+<li class="chapter" data-level="7.1" data-path="extra-projects.html"><a href="extra-projects.html#courses"><i class="fa fa-check"></i><b>7.1</b> Courses</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="extra-projects.html"><a href="extra-projects.html#coursa"><i class="fa fa-check"></i><b>7.1.1</b> Coursa</a></li>
+<li class="chapter" data-level="7.1.2" data-path="extra-projects.html"><a href="extra-projects.html#seminars"><i class="fa fa-check"></i><b>7.1.2</b> Seminars</a></li>
+<li class="chapter" data-level="7.1.3" data-path="extra-projects.html"><a href="extra-projects.html#teaching"><i class="fa fa-check"></i><b>7.1.3</b> Teaching</a></li>
+<li class="chapter" data-level="7.1.4" data-path="extra-projects.html"><a href="extra-projects.html#community-projects"><i class="fa fa-check"></i><b>7.1.4</b> Community projects</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -191,7 +209,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My calender management</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Personal calender management</a>
           </h1>
         </div>
 
@@ -200,17 +218,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">My calender management</h1>
+<h1 class="title">Personal calender management</h1>
 <p class="author"><em>Anthony Davidson</em></p>
-<p class="date"><em>2020-07-21</em></p>
+<p class="date"><em>2020-07-24</em></p>
 </div>
-<div id="overview" class="section level1 unnumbered">
-<h1>Overview</h1>
+<div id="over" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Overview</h1>
 <!-- ## Libraries needed -->
 <p>I find a challenging aspect of academic research is assoicated with organising both my work and personal time management. Now that I am attempting to work with the skills obtained during my PhD I have so many different projects running at/in different levels of development and collaboration. This repository is a draft approach to my time management using <code>tidyPipes</code> workflow.</p>
 <blockquote>
 <p>NOTE: This is my first attempt to apply my <code>tidyPipes</code> workflow (Figure above) to my project management and integrate this into my normal workflow.</p>
 </blockquote>
+<p><img src="img/basic_calender_loop.png" width="400" /></p>
 <p>Generally, this work is focused on writing the scripts to automate the intergration between emails, PhD timeline and other projects. To do this we need to import datasets and modify the structure of these imputs to match the information needed to contruct a timeline of tasks and objectives.</p>
 
 </div>
@@ -220,7 +239,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

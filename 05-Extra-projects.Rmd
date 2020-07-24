@@ -1,8 +1,10 @@
-# Extra projects{.tabset}
+# Extra projects
 
 During Covid19 I have undertaken other additional learning and development tasks to keep me informed for my positions on Council and for my PhD work.
 
-## Courses
+## Courses {.tabset}
+
+During Covid19 as there are less academic activities being undertaken in reality I have upskilled with other online courses and personal development courses below:
 
 ### Coursa
 
@@ -19,13 +21,37 @@ During Covid19 I have undertaken other additional learning and development tasks
 | Mountains 101                                                | 2020-04-04       | N          | 0.00 |                |
 | Machine Learning                                             | 2020-04-04       | N          | 0.00 |                |
 
-## Seminars
+### Seminars
 
+During 2020 I will undertake several small seminars with regard to my PhD work. These include progress seminars and other departmental talks.
 
-## Teaching
+PAST:
+- ANU Masters Class
+- GEM 2020
 
-### ANU: Climate Change
+```{r}
 
-### ANU: Masters Projects
+```
 
-## Community projects
+FUTURE:
+- GEM
+- IAE final seminar
+- ANU lectures?
+
+```{r}
+
+```
+
+### Teaching
+
+#### ANU: Climate Change
+
+#### ANU: Masters Projects
+
+### Community projects
+
+#### Hackett seedlings
+
+#### Ants Surf&Skate
+
+#### Gov Hack...
