@@ -26,7 +26,7 @@ datBASE <- bind_rows(datPhD, datCouncil, datInvert) %>%
   filter(project != "NA") %>%
     mutate(month = as.factor(month))
 
-levels(datBASE$month) <- c("june", "july", "august","september", "october", "november", "december")
+levels(datBASE$month) <- c("january","february", "march", "april", "may" ,"june", "july", "august","september", "october", "november", "december")
 
 # Now let’s load in some data
 #milestones is the demo data
@@ -74,9 +74,12 @@ Timeline charts can be used in a lot of applications like tracking equipment or 
 names(datBASE1)
 
 totalTIMELINE <- datBASE1 %>%
-                  dplyr::select(status, shortName, project, date,month)
+                  dplyr::select(status, shortName, project, date,month) %>%
+                    mutate(project = as.factor(project))
 
-ggplot(totalTIMELINE,aes(x = date, y = shortName, colour = month)) +
+glimpse(totalTIMELINE)
+
+ggplot(totalTIMELINE,aes(x = month, y = shortName)) +
   geom_point() +
   facet_wrap(~project, scales = "free")
 
