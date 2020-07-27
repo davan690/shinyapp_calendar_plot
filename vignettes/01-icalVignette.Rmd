@@ -47,27 +47,30 @@ head(ics_df)
 
 vapply(ics_df, class, character(1))
 
-my_cal = ic_dataframe("./data/exportOUTLOOK.ics")
-dat1 <-ic_read("./data/exportOUTLOOK.ics")
+my_cal = ic_dataframe("./data/raw_data/exportOUTLOOK.ics")
+dat1 <-ic_read("../data/raw_data/exportOUTLOOK.ics")
 ic_dataframe(dat1)
 my_cal
+```
+
+```{r}
 #> [1] "In Budapest for European R Users Meeting (eRum) conference"
 # calculate the duration of the European R users meeting event:
-my_cal$`DTEND;VALUE=DATE`[1] - my_cal$`DTSTART;VALUE=DATE`[1]
+dat1$`DTEND;VALUE=DATE`[1] - dat1$`DTSTART;VALUE=DATE`[1]
 #> Time difference of 4 days
 
 # ?ic_read()
 #export 
-list.files(path = "./data/", pattern = "ics")
+list.files(path = "../data/raw_data/", pattern = "ics")
 
-dat1 <-ic_read("./data/exportOUTLOOK.ics")
+dat1 <-ic_read("../data/raw_data/exportOUTLOOK.ics")
 dat1 <- ic_list(dat1)
-names[dat1]
+# names[dat1]
 
-dat2 <-ic_read("./data/Personal time allocation Calendar.ics")
+dat2 <-ic_read("../data/raw_data/Personal time allocation Calendar.ics")
 dat2
 
-dat3 <-ic_read("./data/england-and-wales.ics")
+dat3 <-ic_read("../data/raw_data/england-and-wales.ics")
 dat3
 
 names(dat1)
