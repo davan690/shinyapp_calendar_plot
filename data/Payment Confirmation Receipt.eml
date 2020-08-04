@@ -1,0 +1,190 @@
+Delivered-To: anthonydavidson101@gmail.com
+Received: by 2002:a6b:ec01:0:0:0:0:0 with SMTP id c1csp3791247ioh;
+        Mon, 27 Jul 2020 02:38:44 -0700 (PDT)
+X-Received: by 2002:aca:4f8a:: with SMTP id d132mr4630738oib.115.1595842724297;
+        Mon, 27 Jul 2020 02:38:44 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595842724; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ROKcchKu/puSJD+bB8dQFlRE3OT5MvZ7y9P/ZSdST5BmGMShjpqc8+UFc0CLtxwEMH
+         Hm0o2jiFv9mo0e5Zlnp2waWDSOPwbCt62cldfC4wEy4MKMu7mRKTSBW3JETi1NB4wf1N
+         IEiXI+WcbjWY23WKVovzqI8v7Cw6NwkTOTL76RD5n8zI51PClJGWzsdCyImshMPEnb+q
+         LpB+SFLa+4+bNNnUZ1cn6M0URnjY0af9OUhCJVa2Li3+l7Ui+dSo6x0MkkQOxKH/vT56
+         opP3jL/kXXr+lKT519XmH8mrRamFZZyHXJUyM9hRZYX2m9pcOwt+nkt9fQq61JavJ9AZ
+         Eu8Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=rH1g5Dg7jhaz+N6N5essgAfryPExKrMOYuYdpgxlEBg=;
+        b=NWeIdpPDX/NC+cu01MZ3dS9St83f6iB5aw7Jr+gjkVyYOTXEECcHnL9GcifEUJ73YY
+         h6mKX1ABf8g6oHfwUTw79CzZydD+wOhh/QPq+Jz9bL0A60qkEDoRYvSJ5y0pQCIw6xa0
+         4xsg/WupCH64B5f1QIOaxgdaLylOp/PF/SZY80vaPaE5+YnHeXHQf/3JqZeQum49qYLK
+         QcjOv8m1kS0bAXzuaBUuNrThAWifzjdCFz1mtQh7Ify1I9gMaNW5KB4pKwpmi2AzZipf
+         +xv7DUZP2kHnf7/dFkdaMGx0LsetokImdCEox5F2nehllZ1m1nSPKQDR8wnQILa+5elh
+         qORQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=hpPStKZK;
+       spf=pass (google.com: domain of bscameron84@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=bscameron84@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <bscameron84@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id t107sor8573168otb.173.2020.07.27.02.38.44
+        for <anthonydavidson101@gmail.com>
+        (Google Transport Security);
+        Mon, 27 Jul 2020 02:38:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bscameron84@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=hpPStKZK;
+       spf=pass (google.com: domain of bscameron84@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=bscameron84@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=rH1g5Dg7jhaz+N6N5essgAfryPExKrMOYuYdpgxlEBg=;
+        b=hpPStKZK2H3gUq+7MQ6YBcvCqiSaLINl21r7qm5lN/f9cwdEvIDbE4wNV50OBJeOZ6
+         QXxN/YA1N38iWjnIi6mjchfydGxBGxUQPAX0mOCcdjZrHYSK7iT0rsqlEUY9NGAkevJx
+         87sNFQyHfq2Ln+gvpA04mL5MMWerpgymh6Nmvsd4IDI/4rQ9E/mYkCNQilyV+Ir3lg5K
+         iB9WFvfSaAa+Di4lk+QU/pJ2wZZvy+Z/jO7xsnpPD6e6FWqFo0gQnjASCBv0PTIXeQcz
+         NFxn3tR6Y2KPrdV5neaS3Ts5aQi4DOoKBT693R++1WC4FanyD466DofMdLkzAbdN7P+J
+         OafQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=rH1g5Dg7jhaz+N6N5essgAfryPExKrMOYuYdpgxlEBg=;
+        b=g9lf4GaSHANJe2a/n2DHE0ldFkbG6PFMXowkx4P7v529Lb6RHRuvk2gA103fWpVykb
+         n85YT342dMqp9kaM5Mtm4IwWcfVV2aP9OQSb28XJqYC7O85g3zChCAgvtKuNTZx+F7uU
+         /U0zCEHPdn4q/TWcMJoaQBCzh405JLM9qB2aFP8WIqoOyOd+TD/VK0jRx2ybRrxUOM9e
+         BAcWmCGWOH9fqd0jO8J1YCZwqaWfFzgySzbupR/U/dbI1KgYLTpaXXfdLGyQeWjCbXdJ
+         DJteO5D6EAxsRSOqFcjYWnc2U0kg5KImCgBFsY4Qb9A/F/xkdpiE7zBxLsBzQNBbn0NA
+         ChTw==
+X-Gm-Message-State: AOAM530xZJpCeWZ8idfOXJZSFkigB5v6X8gVvI4hjFVjKvuessgKwUTD
+	ChLRta21CJJW9QhXjXqRNtQtS1CEotWiMY8Q/USAgyPB
+X-Google-Smtp-Source: ABdhPJzrLqXZAb+sXdszoOnbLdJ9EMPCw1f91COEOMDH/xQwewEBDQ1IPQ/y77I1lJ01sEKofOM14yOcXk5/Hf/Hcdw=
+X-Received: by 2002:a05:6830:14c5:: with SMTP id t5mr19160572otq.64.1595842723637;
+ Mon, 27 Jul 2020 02:38:43 -0700 (PDT)
+MIME-Version: 1.0
+References: <5f0fe2db.1c69fb81.e30a4.97fcSMTPIN_ADDED_MISSING@mx.google.com>
+In-Reply-To: <5f0fe2db.1c69fb81.e30a4.97fcSMTPIN_ADDED_MISSING@mx.google.com>
+From: Brendan Cameron <bscameron84@gmail.com>
+Date: Mon, 27 Jul 2020 19:38:32 +1000
+Message-ID: <CALzARE0Fgk6NQceS2eEV1EYuQtFLW85OdOqs1qmY1Z31orBLog@mail.gmail.com>
+Subject: Fwd: Payment Confirmation Receipt
+To: anthonydavidson101@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000a8ec9205ab69164d"
+
+--000000000000a8ec9205ab69164d
+Content-Type: text/plain; charset="UTF-8"
+
+---------- Forwarded message ---------
+From: Dodo Accounts <accounts@dodo.com.au>
+Date: Thu, Jul 16, 2020 at 3:17 PM
+Subject: Payment Confirmation Receipt
+To: <bscameron84@gmail.com>
+
+
+*Thank you*
+
+*16/07/2020*
+
+
+Hi Brendan,
+
+We'd just like to thank you for the payment of *$95.90* made today on your *NBN
+- (0251161217)*, account number *10298284*.
+
+Your receipt number for this payment is *210166017*.
+
+This has been processed successfully, and will appear on your next
+statement.
+
+Thanks,
+The Dodo Team
+
+--000000000000a8ec9205ab69164d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
+=3D"gmail_attr">---------- Forwarded message ---------<br>From: <strong cla=
+ss=3D"gmail_sendername" dir=3D"auto">Dodo Accounts</strong> <span dir=3D"au=
+to">&lt;<a href=3D"mailto:accounts@dodo.com.au">accounts@dodo.com.au</a>&gt=
+;</span><br>Date: Thu, Jul 16, 2020 at 3:17 PM<br>Subject: Payment Confirma=
+tion Receipt<br>To:  &lt;<a href=3D"mailto:bscameron84@gmail.com">bscameron=
+84@gmail.com</a>&gt;<br></div><br><br>
+
+ =20
+   =20
+   =20
+   =20
+   =20
+   =20
+ =20
+  <div style=3D"font-family:&#39;Source Sans Pro&#39;,Arial,sans-serif;font=
+-size:14px">
+    <table style=3D"width:482px">
+      <tbody><tr>
+        <td>
+          <p style=3D"margin-left:0.0pt;text-autospace:none">
+            <span>
+              <img src=3D"http://c.dodo.com/images/Email-header.png">
+            </span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor=3D"#ffffff" style=3D"font-family:&#39;Source Sans Pro&#=
+39;,Arial,sans-serif;text-align:center;font-size:43px;color:#65308d;padding=
+:30px 35px 20px 35px">
+          <strong>Thank you</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style=3D"margin-left:8pt">
+          <p style=3D"margin-left:0.0pt;text-autospace:none;margin-top:25pt=
+">
+            <span style=3D"font-family:&#39;Source Sans Pro&#39;,Arial,sans=
+-serif;font-size:14px">
+              <strong>16/07/2020</strong>
+              <br>
+              <br>
+              <br>
+                  Hi Brendan,
+                </span>
+          </p>
+          <p style=3D"margin-left:0.0pt;text-autospace:none">
+            <span style=3D"font-family:&#39;Source Sans Pro&#39;,Arial,sans=
+-serif;font-size:14px">
+              We&#39;d just like to thank you for the payment of=20
+				<strong>$95.90</strong>
+				made today on your <strong>NBN - (0251161217)</strong>,=20
+							account number <strong>10298284</strong>. <br>
+              <br>
+							Your receipt number for this payment is <strong>210166017</strong>. =
+<br>
+              <br>
+							This has been processed successfully, and will appear on your next s=
+tatement.
+            </span>
+          </p>
+          <p style=3D"margin-left:0.0pt;text-autospace:none">
+            <span style=3D"font-family:&#39;Source Sans Pro&#39;,Arial,sans=
+-serif;font-size:14px">
+                  Thanks,<br>The Dodo Team
+                </span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style=3D"margin-left:0.0pt;text-autospace:none;margin-top:25pt=
+">
+            <img src=3D"http://c.dodo.com/images/Dodo-telco-footer.png" bor=
+der=3D"0" usemap=3D"#m_4025642429225404455_Map">
+          </p>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div></div>
+
+--000000000000a8ec9205ab69164d--

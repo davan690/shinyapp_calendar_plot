@@ -6,4 +6,16 @@ editor_options:
 
 # Introduction {#intro}
 
-SEE tidyPipes MANUAL....
+> NOTE: This is my first attempt to apply my `tidyPipes` workflow (Figure above) to my project management and integrate this into my normal workflow. 
+
+Generally, this work is focused on writing the scripts to automate the intergration between emails, PhD timeline and other projects. To do this we need to import datasets and modify the structure of these imputs to match the information needed to contruct a timeline of tasks and objectives.
+
+<img src="./img/basic_calender_loop.png" width="400" />
+
+SEE tidyPipes MANUAL for general concept and approach. This repository contains example data and scripts needed to visualise and communicate multiple different projects including:
+
+- `flatttingRMDstlyle/` (a repository for documentign and recording reproducible reports for my flatting arrangements).
+
+- `PhDplanningRMDstyle/` (the documentation and reporting for the final 6months of my PhD).
+
+- 

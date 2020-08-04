@@ -11,9 +11,9 @@ library(scales)
 library(lubridate)
 ```
 
-# Methods {#methods .tabset}
+# Methods {#methods}
 
-```{r message=FALSE, warning=FALSE, include=FALSE}
+```{r message=FALSE, warning=FALSE,echo = FALSE, include=FALSE}
 #### these are now as csv files for each datasheet entry
 #orginal excel in Raw_data file...
 #no conversion to csv to aviod same data issues...
@@ -146,7 +146,6 @@ df <- readr::read_csv(here::here('./data/milestones.csv'))
 # set Home directory > home = setwd(Sys.getenv("HOME")); >  > # make path to the csv file > fpath = file.path(home, "Desktop", "at0901.csv"); > # read the csv file > at0901 = read.csv(fpath, header=TRUE);
 ```
 
-
 Generally the concept is to create a baseline dataset of information and then extend this using `dataspice` to create a tidy format of data that can then be modelled and visualised using the `tidyverse` suite of tools.
 
 ```{r}
@@ -182,8 +181,7 @@ df <- df[with(df, order(date)), ]
 text_offset <- 0.05
 ```
 
-
-## Data setup 
+## Data setup {.tabset}
 
 ```{r}
 library(knitr)
@@ -198,13 +196,11 @@ There are multiple difference sources of information for this calendar. To be ab
   
 - Actions and milestones
 
-## Data/information
-
 The purpose of this vignette is to show how, with reference to a real-world application: creating a timetable for a new module. It assumes you’ve installed the package following instructions in the README and have attached it as follows:
 
 Overall this is time series data. A good general tutorial for this sort of data is here on [youtube]("https://www.youtube.com/watch?v=uenWg7ZSu4Y"). There are several ways to visualise this data, below are two selected bits of code that do this. Overall there are two generalised datasets that may be helpful to other individuals for each project or combination of projects (for the APR for example). The data for this collection of tasks associated with timelines and targets. The baseline dataset is found in the `.xlsx` file named "baseline-dataset-calender.xlsx". This is the base file I have been adding information to when I change the overall structure of the calendar projects.
 
-## Manual data
+### Manual data
 
 To begin with I have collated and restructured the avaliable data from downloaded `.ics` data as a csv and the UCSRC council calendar. This sorted data was orginally saved as "baseline-dataset-calender.xlsx" but as I couldnt get the xcel package to work nicely I converted each project dataset into a csv file stored in the `./data/` folder.
 
@@ -212,7 +208,7 @@ To begin with I have collated and restructured the avaliable data from downloade
 list.files("./data/")
 ```
 
-## Baseline
+### Baseline
 
 ```{r}
 source("./R/importDATAscript.R", echo = FALSE)
@@ -225,7 +221,7 @@ DT::datatable(head(datBASE))
 ```
 
 
-## `.xlsx`
+### `.xlsx`
 
 These are excel workbooks. For now this is very simple and works with the current version of excel files (2020). Each "sheet" of the excel file contains a single projects information. This is then converted to a csv file when needed. In the future each project will have its own file that can be added to or modified in a shiny interactive web app.
 
@@ -240,7 +236,7 @@ These are excel workbooks. For now this is very simple and works with the curren
 
 > A key aspect of these R scripts is the date format. This has been challenging to work with but currently I have the following notes on the transformation of the date/time data from excel and manually (with csv file below).
 
-## `.csv`
+### `.csv`
 
 Generally the data can be imported as a csv, or other form. 
 
@@ -250,13 +246,13 @@ emailsCalender1 <- read_csv("data/raw_data/anuemails.CSV")
 #str(emailsCalender1)
 ```
 
-## `.iCal` data
+### `.iCal` data
 
 ```{r}
 #this currently online
 ```
 
-## Other data
+### Other data
 
 Bernd and others have made timelines in R using the following R script:
 
@@ -268,108 +264,4 @@ Aspects of this simple timeline are incoperated as so:
 
 ```{r}
 
-```
-
-### Action tasks
-
-Table by the group of project month or something else???
-
-#### Table 1
-
-```{r}
-table(datBASE1$month, datBASE1$project)
-```
- 
-#### Table 2
-
-```{r}
-table(datBASE1$month, datBASE1$project, datBASE1$status)
-```
-
-### Milestones timeline
-
-"Coverting a dataframe into a timeline"
-
-### Factoring
-
-```{r}
-#factoring
-status_levels <- c("Complete", "On Target", "At Risk", "Critical")
-
-status_colors <- c("#0070C0", "#00B050", "#FFC000", "#C00000")
-
-df$status <- factor(df$status, levels=status_levels, ordered=TRUE)
-```
-
-
-
-### Direction
-
-```{r}
-
-#direction
-positions <- c(0.5, -0.5, 1.0, -1.0, 1.5, -1.5)
-directions <- c(1, -1)
-
-line_pos <- data.frame(
-    "date"=unique(df$date),
-    "position"=rep(positions, length.out=length(unique(df$date))),
-    "direction"=rep(directions, length.out=length(unique(df$date)))
-)
-
-df <- merge(x=df, y=line_pos, by="date", all = TRUE)
-df <- df[with(df, order(date, status)), ]
-
-df$month_count <- ave(df$date==df$date, df$date, FUN=cumsum)
-df$text_position <- (df$month_count * text_offset * df$direction) + df$position
-head(df)
-```
-
-
-### Counts
-
-```{r}
-text_offset <- 0.2
-
-df$month_count <- ave(df$date==df$date, df$date, FUN=cumsum)
-df$text_position <- (df$month_count * text_offset * df$direction) + df$position
-head(df)
-```
-
-
-### Buffering times
-
-
-```{r eval = FALSE}
-month_buffer <- 2
-
-month_date_range <- seq(min(df$date) - months(month_buffer), max(df$date) + months(month_buffer), by='month')
-month_format <- format(month_date_range, '%b')
-month_df <- data.frame(month_date_range, month_format)
-```
-
-
-### December/January only
-
-```{r eval = FALSE}
-year_date_range <- seq(min(df$date) - months(month_buffer), max(df$date) + months(month_buffer), by='year')
-year_date_range <- as.Date(
-    intersect(
-        ceiling_date(year_date_range, unit="year"),
-        floor_date(year_date_range, unit="year")
-    ),  origin = "1970-01-01"
-)
-year_format <- format(year_date_range, '%Y')
-year_df <- data.frame(year_date_range, year_format)
-```
-
-
-### Interactivity
-
-Shiny....
-
-```{r include=FALSE}
-library(shiny)
-library(visNetwork)
-# shiny::runApp(system.file("shiny", package = "visNetwork"))
 ```
